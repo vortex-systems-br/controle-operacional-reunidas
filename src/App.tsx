@@ -7179,9 +7179,13 @@ function App() {
           <table>
             <thead><tr><th>Usuário</th><th>Perfil</th><th>Base</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td>Oswald</td><td>Operador</td><td>ATA</td><td><span className="status liberado">ATIVO</span></td></tr>
-              <tr><td>Supervisor</td><td>Supervisão</td><td>TODAS</td><td><span className="status liberado">ATIVO</span></td></tr>
-              <tr><td>Operador Bauru</td><td>Operador</td><td>BRU</td><td><span className="status liberado">ATIVO</span></td></tr>
+              
+              <tr>
+  <td>TRÁFEGO ARAÇATUBA</td>
+  <td>Operador</td>
+  <td>ATA</td>
+  <td><span className="status liberado">ATIVO</span></td>
+</tr>
             </tbody>
           </table>
         </div>
@@ -7521,7 +7525,13 @@ function App() {
           <div className="topbar-right">
             <div className="date-box"><Clock3 size={20} /><div><span>{agora.toLocaleDateString('pt-BR', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}</span><strong>{agora.toLocaleTimeString('pt-BR')}</strong></div></div>
             <div className="global-search"><Search size={18} /><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Buscar prefixo, linha..." />{busca && <button className="clear-search" onClick={() => setBusca('')}><X size={16} /></button>}</div>
-            <div className="user"><div className="avatar">O</div><div><strong>Oswald</strong><span>Operador</span></div></div>
+            <div className="user">
+  <div className="avatar">T</div>
+  <div>
+    <strong>TRÁFEGO ARAÇATUBA</strong>
+    <span>Operador</span>
+  </div>
+</div>
           </div>
         </header>
 
