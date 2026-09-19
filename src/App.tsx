@@ -200,6 +200,7 @@ const ATENDIMENTOS_KEY = 'cor-atendimentos-manutencao-v1'
 const BASE_OPERACIONAL_KEY = 'cor-base-operacional-v1'
 const CARGA_PLANILHAS_KEY = 'cor-carga-planilhas-202609-v1'
 const BACKUP_CARGA_PLANILHAS_KEY = 'cor-backup-carga-planilhas-202609-v1'
+const ATUALIZACAO_1909_KEY = 'cor-atualizacao-planilhas-20260919-v1'
 
 const movimentacoesIniciais: Movimentacao[] = [
   {
@@ -2959,134 +2960,1153 @@ const movimentacoesHistoricasPlanilhas: Movimentacao[] = [
   }
 ]
 
-const retencoesAtivasPlanilhas: Retencao[] = [
+const movimentacoesAtualizacao17a19: Movimentacao[] = [
   {
-      id: "planilha-ret-01",
-      baseOperacional: "ATA",
-      prefixo: "144903",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "24/05/2026",
-      horaEntrada: "-",
-      motivo: "MOTOR",
-      previsaoSaida: "10/07/2026",
-      local: "SPO",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-001',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '166004',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'CPN x ATA 21:30',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '06:00',
+    motivo: 'Limpador do lado esquerdo espanou o pino para o aperto do mesmo',
+    problemaManutencao: 'Limpador do lado esquerdo espanou o pino para o aperto do mesmo',
+    liberacaoManutencao: '-',
+    linhaSaida: '-',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '-',
   },
   {
-      id: "planilha-ret-02",
-      baseOperacional: "ATA",
-      prefixo: "144905",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "14/09/2026",
-      horaEntrada: "-",
-      motivo: "SUSPENSÃO E VAZAMENTO DE ÁGUA",
-      previsaoSaida: "-",
-      local: "ATA",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-002',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '6738',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '06:18',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: '-',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '-',
   },
   {
-      id: "planilha-ret-03",
-      baseOperacional: "ATA",
-      prefixo: "146203",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "01/05/2026",
-      horaEntrada: "-",
-      motivo: "MOTOR",
-      previsaoSaida: "26/07/2026",
-      local: "BRU",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-003',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '168103',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'STS x ATA',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '06:37',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x CPN 22:00',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '21:40',
   },
   {
-      id: "planilha-ret-04",
-      baseOperacional: "ATA",
-      prefixo: "148601",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "10/09/2026",
-      horaEntrada: "-",
-      motivo: "ELÉTRICA",
-      previsaoSaida: "-",
-      local: "ATA",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-004',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '140711',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ARA',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '07:02',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: '-',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '-',
   },
   {
-      id: "planilha-ret-05",
-      baseOperacional: "ATA",
-      prefixo: "164004",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "08/09/2026",
-      horaEntrada: "-",
-      motivo: "FUNILARIA",
-      previsaoSaida: "-",
-      local: "ATA",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-005',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '6630',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '07:16',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: '-',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '-',
   },
   {
-      id: "planilha-ret-06",
-      baseOperacional: "ATA",
-      prefixo: "164613",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "01/05/2026",
-      horaEntrada: "-",
-      motivo: "MOTOR",
-      previsaoSaida: "10/07/2026",
-      local: "BRU",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260917-006',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '212605',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 21H31',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '07:48',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: '-',
+    dataSaida: '17/09/2026',
+    horaManobra: '-',
+    horaSaida: '-',
   },
   {
-      id: "planilha-ret-07",
-      baseOperacional: "ATA",
-      prefixo: "164618",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "06/08/2026",
-      horaEntrada: "-",
-      motivo: "CÂMBIO",
-      previsaoSaida: "11/08/2026",
-      local: "ATA",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260918-001',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '164013',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SJP x ATA 08:15',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '11:40',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    linhaSaida: 'ATA x CPN 09:00',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '08:52',
   },
   {
-      id: "planilha-ret-08",
-      baseOperacional: "ATA",
-      prefixo: "164816",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "-",
-      horaEntrada: "-",
-      motivo: "RESTAURAÇÃO MUSEU",
-      previsaoSaida: "-",
-      local: "ATA",
-      status: "RETIDO",
-      dataLiberacao: "-",
+    id: 'planilha-atual-20260918-002',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '164005',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 07:30',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '17:45',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'ERIC',
+    linhaSaida: 'ATA x SJP 09:10',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '08:58',
   },
   {
-      id: "planilha-ret-09",
-      baseOperacional: "ATA",
-      prefixo: "168107",
-      empresa: "REUNIDAS",
-      linhaEntrada: "-",
-      dataEntrada: "13/08/2026",
-      horaEntrada: "-",
-      motivo: "EM ANÁLISE",
-      previsaoSaida: "-",
-      local: "BRU",
-      status: "RETIDO",
-      dataLiberacao: "-",
-  }
+    id: 'planilha-atual-20260918-003',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '146208',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'TLG x SPO 18:40',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '23:00',
+    motivo: 'VAZAMENTO DE AR SUSPENSÃO',
+    problemaManutencao: 'VAZAMENTO DE AR SUSPENSÃO',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-004',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '162204',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 13:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '00:01',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'ERIC',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-005',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '146201',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 21:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '06:04',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'HELENITA',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-006',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '148608',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'STS x ATA 20:00',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '06:20',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    linhaSaida: 'ATA x SPO 09:30',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '09:15',
+  },
+  {
+    id: 'planilha-atual-20260918-007',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '140712',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 22:20',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '06:42',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-008',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '164001',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'CPN x ATA 21:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '07:00',
+    motivo: 'REGULAR FAROL, SISTEMA DE AR NÃO PASSA DE 6 BAR',
+    problemaManutencao: 'REGULAR FAROL, SISTEMA DE AR NÃO PASSA DE 6 BAR',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    responsavelLimpeza: 'HELENITA',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-009',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '212603',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SPO x ATA 22:15',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '07:23',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-010',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '192604',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SBC x ATA 20:45',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '07:40',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'HELENITA',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-011',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '6734',
+    empresa: 'ITAMARATY',
+    linhaEntrada: 'CIRCULAR',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '08:10',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'ERIC',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-012',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '65255',
+    empresa: 'PENHA',
+    linhaEntrada: 'CURITIBA',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '08:25',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'ERIC',
+    linhaSaida: '-',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '17:27',
+  },
+  {
+    id: 'planilha-atual-20260918-013',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '6734',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '09:02',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-014',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '6818',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '10:46',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-015',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '462602',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SJP x ATA 08:15',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '11:51',
+    motivo: 'Foi identificado que o volante e a carroceria do veículo estão desalinhados.',
+    problemaManutencao: 'Foi identificado que o volante e a carroceria do veículo estão desalinhados.',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'ERIC',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-016',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '7279',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPO',
+    responsavelLimpeza: 'HELENITA',
+    linhaSaida: 'URBANO',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '12:14',
+  },
+  {
+    id: 'planilha-atual-20260918-017',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '212606',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'RJ x ATA 20:00',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '13:00',
+    motivo: 'SEM OCORRÊNCIA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-018',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '212601',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'RJ x ATA 20H00',
+    dataEntrada: '17/09/2026',
+    horaEntrada: '13:58',
+    motivo: 'NADA CONSTA',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x RJ 13:30',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '13:05',
+  },
+  {
+    id: 'planilha-atual-20260918-019',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '212602',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'RJ x ATA 20:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '13:20',
+    motivo: 'SEM OCORRÊNCIA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-020',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '140712',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x RJ 14:00',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '13:45',
+  },
+  {
+    id: 'planilha-atual-20260918-021',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '462602',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ESCOTEIRO SJP',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '14:10',
+  },
+  {
+    id: 'planilha-atual-20260918-022',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '6734',
+    empresa: 'ITAMARATY',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'URBANO',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '16:53',
+  },
+  {
+    id: 'planilha-atual-20260918-023',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '462605',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SPO x ATA 07:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '18:20',
+    motivo: 'SEM OCORRÊNCIA',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-024',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '162206',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'CPN x ATA',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '18:52',
+    motivo: 'SUPER AQUECENDO NA SUBIDA',
+    problemaManutencao: 'SUPER AQUECENDO NA SUBIDA',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-025',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '160001',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 10:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '19:16',
+    motivo: 'VÁLVULA DO COMPRESSOR VAZANDO',
+    problemaManutencao: 'VÁLVULA DO COMPRESSOR VAZANDO',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-026',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '148601',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x STS 20:00',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '19:25',
+  },
+  {
+    id: 'planilha-atual-20260918-027',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '146201',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x TLG',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '19:26',
+  },
+  {
+    id: 'planilha-atual-20260918-028',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '192604',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SBC 20:30',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '20:00',
+  },
+  {
+    id: 'planilha-atual-20260918-029',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '212603',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SPO 21:15',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '20:45',
+  },
+  {
+    id: 'planilha-atual-20260918-030',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '160001',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SPO 21:30',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '21:05',
+  },
+  {
+    id: 'planilha-atual-20260918-031',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '212606',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SPO 21:35',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '21:10',
+  },
+  {
+    id: 'planilha-atual-20260918-032',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '462605',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x CPN 22:00',
+    dataSaida: '18/09/2026',
+    horaManobra: '-',
+    horaSaida: '21:35',
+  },
+  {
+    id: 'planilha-atual-20260918-033',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '462602',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SJP x ATA 18:15',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '21:40',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260918-034',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '168109',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 13:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '23:40',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    responsavelLimpeza: 'IGOR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-001',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '168109',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 13:30',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '23:40',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    responsavelLimpeza: 'IGOR',
+    linhaSaida: 'ATA x SPO 06:30',
+    dataSaida: '19/09/2026',
+    horaManobra: '00:01',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-002',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '462602',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SJP x ATA 18:15',
+    dataEntrada: '18/09/2026',
+    horaEntrada: '21:40',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    linhaSaida: 'ATA x SPO 06:00',
+    dataSaida: '19/09/2026',
+    horaManobra: '00:05',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-003',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '146202',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 21:31',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '06:15',
+    motivo: 'VEÍCULO COM PANE ELÉTRICA, VERIFICAR O SISTEMA',
+    problemaManutencao: 'VEÍCULO COM PANE ELÉTRICA, VERIFICAR O SISTEMA',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-004',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '140711',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 22:20',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '06:20',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-005',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '166004',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'STS x ATA 20:00',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '06:30',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-006',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '148602',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SPO x ATA 22H15',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '06:48',
+    motivo: 'PNEU DIANTEIRO DIREITO / PORCA FROUXA',
+    problemaManutencao: 'PNEU DIANTEIRO DIREITO / PORCA FROUXA',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-007',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '148605',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '06:49',
+    motivo: 'AR CONDICIONADO BARULHENTO NO SALÃO',
+    problemaManutencao: 'AR CONDICIONADO BARULHENTO NO SALÃO',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-008',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '462607',
+    empresa: 'PIRACICABANA',
+    linhaEntrada: 'SPO x GBE 23H00',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '07:31',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SPO 09H30',
+    dataSaida: '19/09/2026',
+    horaManobra: '-',
+    horaSaida: '09:27',
+  },
+  {
+    id: 'planilha-atual-20260919-009',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '162205',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SBC x ATA 20H45',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '08:04',
+    motivo: 'VAZANDO AR / VERIFICAR FREIO',
+    problemaManutencao: 'VAZANDO AR / VERIFICAR FREIO',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-010',
+    baseOperacional: 'ATA',
+    tipo: 'SAIU',
+    prefixo: '148606',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '-',
+    horaEntrada: '-',
+    motivo: '-',
+    problemaManutencao: '-',
+    liberacaoManutencao: '-',
+    linhaSaida: 'ATA x SJP 09H10',
+    dataSaida: '19/09/2026',
+    horaManobra: '-',
+    horaSaida: '08:40',
+  },
+  {
+    id: 'planilha-atual-20260919-011',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '164009',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'SJP x ATA 08H15',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '11:45',
+    motivo: 'VERIFICAR VAZAMENTO DE AR, POIS AO SER ACIONADO O FREIO A PRESSÃO CAI PARA 6',
+    problemaManutencao: 'VERIFICAR VAZAMENTO DE AR, POIS AO SER ACIONADO O FREIO A PRESSÃO CAI PARA 6',
+    liberacaoManutencao: 'EM_MANUTENCAO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-012',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '168104',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'RJ x ATA 20H30',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '11:54',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
+  {
+    id: 'planilha-atual-20260919-013',
+    baseOperacional: 'ATA',
+    tipo: 'CHEGOU',
+    prefixo: '146200',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'RJ x ATA 20:00',
+    dataEntrada: '19/09/2026',
+    horaEntrada: '12:17',
+    motivo: 'NADA CONSTA NO VEÍCULO',
+    problemaManutencao: '-',
+    liberacaoManutencao: 'LIBERADO',
+    liberacaoLimpeza: 'LIMPAR',
+    linhaSaida: '-',
+    dataSaida: '-',
+    horaManobra: '-',
+    horaSaida: '-',
+  },
 ]
+
+const retencoesSnapshot1909: Retencao[] = [
+  {
+    id: 'snapshot-1909-ret-144903',
+    baseOperacional: 'ATA',
+    prefixo: '144903',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '24/05/2026',
+    horaEntrada: '-',
+    motivo: 'MOTOR',
+    previsaoSaida: '10/07/2026',
+    local: 'SPO',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-146203',
+    baseOperacional: 'ATA',
+    prefixo: '146203',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '01/05/2026',
+    horaEntrada: '-',
+    motivo: 'MOTOR',
+    previsaoSaida: '26/07/2026',
+    local: 'BRU',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-164613',
+    baseOperacional: 'ATA',
+    prefixo: '164613',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '01/05/2026',
+    horaEntrada: '-',
+    motivo: 'MOTOR',
+    previsaoSaida: '10/07/2026',
+    local: 'BRU',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-164816',
+    baseOperacional: 'ATA',
+    prefixo: '164816',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '01/05/2026',
+    horaEntrada: '-',
+    motivo: 'RESTAURAÇÃO MUSEU',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-168107',
+    baseOperacional: 'ATA',
+    prefixo: '168107',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '13/08/2026',
+    horaEntrada: '-',
+    motivo: 'EM ANÁLISE',
+    previsaoSaida: '-',
+    local: 'BRU',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-148604',
+    baseOperacional: 'ATA',
+    prefixo: '148604',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'RJ x ATA',
+    dataEntrada: '09/09/2026',
+    horaEntrada: '13:02',
+    motivo: 'ALTERNADOR',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'LIBERADO',
+    dataLiberacao: '17/09/2026',
+  },
+  {
+    id: 'snapshot-1909-ret-164006',
+    baseOperacional: 'ATA',
+    prefixo: '164006',
+    empresa: 'REUNIDAS',
+    linhaEntrada: 'RJ x ATA 20:15',
+    dataEntrada: '09/09/2026',
+    horaEntrada: '12:41',
+    motivo: 'Barra curta de direção',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'LIBERADO',
+    dataLiberacao: '17/09/2026',
+  },
+  {
+    id: 'snapshot-1909-ret-164004',
+    baseOperacional: 'ATA',
+    prefixo: '164004',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '08/09/2026',
+    horaEntrada: '-',
+    motivo: 'FUNILARIA',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-148607',
+    baseOperacional: 'ATA',
+    prefixo: '148607',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '10/09/2026',
+    horaEntrada: '-',
+    motivo: 'CÁRTER',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'LIBERADO',
+    dataLiberacao: '17/09/2026',
+  },
+  {
+    id: 'snapshot-1909-ret-164618',
+    baseOperacional: 'ATA',
+    prefixo: '164618',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '06/08/2026',
+    horaEntrada: '-',
+    motivo: 'CÂMBIO',
+    previsaoSaida: '11/08/2026',
+    local: 'ATA',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-144905',
+    baseOperacional: 'ATA',
+    prefixo: '144905',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '14/09/2026',
+    horaEntrada: '-',
+    motivo: 'SUSPENSÃO E VAZAMENTO DE ÁGUA',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'LIBERADO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-162202',
+    baseOperacional: 'ATA',
+    prefixo: '162202',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '15/09/2026',
+    horaEntrada: '-',
+    motivo: '-',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+  {
+    id: 'snapshot-1909-ret-148606',
+    baseOperacional: 'ATA',
+    prefixo: '148606',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '15/09/2026',
+    horaEntrada: '-',
+    motivo: '-',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'LIBERADO',
+    dataLiberacao: '19/09/2026',
+  },
+  {
+    id: 'snapshot-1909-ret-164012',
+    baseOperacional: 'ATA',
+    prefixo: '164012',
+    empresa: 'REUNIDAS',
+    linhaEntrada: '-',
+    dataEntrada: '15/09/2026',
+    horaEntrada: '-',
+    motivo: '-',
+    previsaoSaida: '-',
+    local: 'ATA',
+    status: 'RETIDO',
+    dataLiberacao: '-',
+  },
+]
+
+const retencoesAtivasPlanilhas: Retencao[] = retencoesSnapshot1909.filter(
+  (item) => item.status === 'RETIDO'
+)
+
 
 const formMovInicial: FormMovimentacao = {
   tipo: 'CHEGOU',
@@ -3192,6 +4212,169 @@ function normalizar(texto: string) {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
+}
+
+
+const PREFIXOS_COM_SAIDA_CONFIRMADA_EM_17 = new Set([
+  '166004',
+  '6738',
+  '168103',
+  '140711',
+  '6630',
+  '212605',
+])
+
+function mesmaMovimentacaoAtualizacao(
+  atual: Movimentacao,
+  importada: Movimentacao
+) {
+  if (
+    atual.baseOperacional !== importada.baseOperacional ||
+    atual.tipo !== importada.tipo ||
+    atual.prefixo !== importada.prefixo
+  ) {
+    return false
+  }
+
+  const dataAtual =
+    atual.tipo === 'CHEGOU' ? atual.dataEntrada : atual.dataSaida
+  const dataImportada =
+    importada.tipo === 'CHEGOU'
+      ? importada.dataEntrada
+      : importada.dataSaida
+
+  if (dataAtual !== dataImportada) return false
+
+  const horaAtual =
+    atual.tipo === 'CHEGOU'
+      ? atual.horaEntrada
+      : atual.horaSaida !== '-'
+        ? atual.horaSaida
+        : atual.horaManobra
+
+  const horaImportada =
+    importada.tipo === 'CHEGOU'
+      ? importada.horaEntrada
+      : importada.horaSaida !== '-'
+        ? importada.horaSaida
+        : importada.horaManobra
+
+  const linhaAtual =
+    atual.tipo === 'CHEGOU' ? atual.linhaEntrada : atual.linhaSaida
+  const linhaImportada =
+    importada.tipo === 'CHEGOU'
+      ? importada.linhaEntrada
+      : importada.linhaSaida
+
+  const horasCompativeis =
+    horaAtual === horaImportada ||
+    horaAtual === '-' ||
+    horaImportada === '-'
+
+  const linhasCompativeis =
+    normalizar(linhaAtual) === normalizar(linhaImportada) ||
+    linhaAtual === '-' ||
+    linhaImportada === '-'
+
+  return horasCompativeis && linhasCompativeis
+}
+
+function aplicarAtualizacaoMovimentacoes1909(
+  anteriores: Movimentacao[]
+): Movimentacao[] {
+  const ajustadas = anteriores.map((item) => {
+    if (
+      item.baseOperacional === 'ATA' &&
+      item.tipo === 'CHEGOU' &&
+      item.dataEntrada === '17/09/2026' &&
+      PREFIXOS_COM_SAIDA_CONFIRMADA_EM_17.has(item.prefixo)
+    ) {
+      return {
+        ...item,
+        historicoSomente: true,
+      }
+    }
+
+    return item
+  })
+
+  const novas = movimentacoesAtualizacao17a19.filter(
+    (importada) =>
+      !ajustadas.some((atual) =>
+        mesmaMovimentacaoAtualizacao(atual, importada)
+      )
+  )
+
+  return [...novas, ...ajustadas]
+}
+
+function aplicarSnapshotRetencoes1909(
+  anteriores: Retencao[]
+): Retencao[] {
+  const atualizadas = [...anteriores]
+
+  for (const alvo of retencoesSnapshot1909) {
+    const indice = atualizadas.findIndex(
+      (item) =>
+        item.prefixo === alvo.prefixo &&
+        item.baseOperacional === alvo.baseOperacional
+    )
+
+    if (indice < 0) {
+      atualizadas.unshift(alvo)
+      continue
+    }
+
+    const atual = atualizadas[indice]
+
+    atualizadas[indice] = {
+      ...atual,
+      empresa: alvo.empresa || atual.empresa,
+      linhaEntrada:
+        alvo.linhaEntrada !== '-' ? alvo.linhaEntrada : atual.linhaEntrada,
+      dataEntrada:
+        alvo.dataEntrada !== '-' ? alvo.dataEntrada : atual.dataEntrada,
+      horaEntrada:
+        alvo.horaEntrada !== '-' ? alvo.horaEntrada : atual.horaEntrada,
+      motivo: alvo.motivo !== '-' ? alvo.motivo : atual.motivo,
+      previsaoSaida:
+        alvo.previsaoSaida !== '-' ? alvo.previsaoSaida : atual.previsaoSaida,
+      local: alvo.local,
+      status: alvo.status,
+      dataLiberacao:
+        alvo.status === 'RETIDO'
+          ? '-'
+          : alvo.dataLiberacao !== '-'
+            ? alvo.dataLiberacao
+            : atual.status === 'LIBERADO'
+              ? atual.dataLiberacao
+              : '-',
+    }
+  }
+
+  const indice148601 = atualizadas.findIndex(
+    (item) =>
+      item.prefixo === '148601' &&
+      item.baseOperacional === 'ATA'
+  )
+
+  if (indice148601 >= 0) {
+    atualizadas[indice148601] = {
+      ...atualizadas[indice148601],
+      status: 'LIBERADO',
+      dataLiberacao: '18/09/2026',
+    }
+  }
+
+  return atualizadas
+}
+
+function atualizacao1909JaAplicada() {
+  try {
+    return localStorage.getItem(ATUALIZACAO_1909_KEY) === '1'
+  } catch {
+    return false
+  }
 }
 
 function dataBR(dataISO: string) {
@@ -3396,6 +4579,8 @@ function App() {
     useState(cargaPlanilhasJaAplicada)
   const [backupCargaDisponivel, setBackupCargaDisponivel] =
     useState(backupCargaPlanilhasExiste)
+  const [atualizacao1909Aplicada, setAtualizacao1909Aplicada] =
+    useState(atualizacao1909JaAplicada)
 
   useEffect(() => {
     localStorage.setItem(MOVIMENTACOES_KEY, JSON.stringify(movimentacoes))
@@ -3412,6 +4597,26 @@ function App() {
   useEffect(() => {
     localStorage.setItem(BASE_OPERACIONAL_KEY, baseSelecionada)
   }, [baseSelecionada])
+
+  useEffect(() => {
+    if (atualizacao1909Aplicada) return
+
+    setMovimentacoes((anteriores) =>
+      aplicarAtualizacaoMovimentacoes1909(anteriores)
+    )
+    setRetencoes((anteriores) =>
+      aplicarSnapshotRetencoes1909(anteriores)
+    )
+
+    try {
+      localStorage.setItem(ATUALIZACAO_1909_KEY, '1')
+    } catch {
+      // Se o armazenamento estiver bloqueado, a atualização ainda vale nesta sessão.
+    }
+
+    setAtualizacao1909Aplicada(true)
+    setUltimaAtualizacao(new Date())
+  }, [atualizacao1909Aplicada])
 
   useEffect(() => {
     const timer = setInterval(() => setAgora(new Date()), 1000)
@@ -4353,7 +5558,7 @@ function App() {
       'Importar a carga consolidada das planilhas de 08 a 17/09/2026?\n\n' +
       '• 133 movimentações de 08 a 16/09 entrarão como HISTÓRICO SOMENTE.\n' +
       '• Os registros atuais de 17/09 não serão duplicados.\n' +
-      '• 9 retenções ativas serão conferidas/ajustadas pelo snapshot mais recente.\n' +
+      '• 9 retenções ativas serão conferidas/ajustadas pelo snapshot de 19/09.\n' +
       '• Será criado um BACKUP AUTOMÁTICO antes de qualquer alteração.\n' +
       '• Dados ausentes não serão inventados.'
     )
@@ -4483,8 +5688,16 @@ function App() {
         baseSelecionada?: BaseOperacional
       }
 
-      setMovimentacoes(backup.movimentacoes ?? movimentacoesIniciais)
-      setRetencoes(backup.retencoes ?? retencoesIniciais)
+      setMovimentacoes(
+        aplicarAtualizacaoMovimentacoes1909(
+          backup.movimentacoes ?? movimentacoesIniciais
+        )
+      )
+      setRetencoes(
+        aplicarSnapshotRetencoes1909(
+          backup.retencoes ?? retencoesIniciais
+        )
+      )
       setAtendimentos(backup.atendimentos ?? atendimentosIniciais)
 
       if (
@@ -4525,8 +5738,12 @@ function App() {
     )
     if (!confirmar) return
 
-    setMovimentacoes(movimentacoesIniciais)
-    setRetencoes(retencoesIniciais)
+    setMovimentacoes(
+      aplicarAtualizacaoMovimentacoes1909(movimentacoesIniciais)
+    )
+    setRetencoes(
+      aplicarSnapshotRetencoes1909(retencoesIniciais)
+    )
     setAtendimentos(atendimentosIniciais)
     setBaseSelecionada('ATA')
     setFiltroLocalRetido('TODOS')
@@ -4538,10 +5755,12 @@ function App() {
     setUltimaAtualizacao(new Date())
     setCargaPlanilhasAplicada(false)
     setBackupCargaDisponivel(false)
+    setAtualizacao1909Aplicada(true)
 
     try {
       localStorage.removeItem(CARGA_PLANILHAS_KEY)
       localStorage.removeItem(BACKUP_CARGA_PLANILHAS_KEY)
+      localStorage.setItem(ATUALIZACAO_1909_KEY, '1')
     } catch {
       // Sem ação: o estado em memória já foi restaurado.
     }
@@ -5040,7 +6259,7 @@ function App() {
                 <div><span>Base</span><strong>{movSelecionada.baseOperacional} - {nomeBase(movSelecionada.baseOperacional)}</strong></div>
                 <div>
                   <span>Origem do registro</span>
-                  <strong>{movSelecionada.historicoSomente ? 'HISTÓRICO DAS PLANILHAS' : 'OPERAÇÃO ATUAL'}</strong>
+                  <strong>{movSelecionada.id.startsWith('planilha-') ? (movSelecionada.historicoSomente ? 'HISTÓRICO DAS PLANILHAS' : 'ATUALIZAÇÃO DAS PLANILHAS') : 'OPERAÇÃO ATUAL'}</strong>
                 </div>
                 <div><span>Empresa</span><strong>{movSelecionada.empresa}</strong></div>
                 <div><span>Linha entrada</span><strong>{movSelecionada.linhaEntrada}</strong></div>
@@ -5773,7 +6992,7 @@ function App() {
                             <td>{item.dataSaida} {item.horaSaida}</td>
                             <td>
                               <span className="local-badge">
-                                {item.historicoSomente ? 'PLANILHA' : 'SISTEMA'}
+                                {item.id.startsWith('planilha-') ? 'PLANILHA' : 'SISTEMA'}
                               </span>
                             </td>
                           </tr>
@@ -5999,7 +7218,8 @@ function App() {
               <tr><th>Nova avaria</th><td>Pode ser aberta depois da chegada sem apagar a condição original registrada pelo tráfego</td></tr>
               <tr><th>Finalização</th><td>Serviço realizado e responsável são obrigatórios; CIF/matrícula pode ser informado quando necessário</td></tr>
               <tr><th>Importante</th><td>LIBERADO na manutenção não significa SAIU da garagem</td></tr>
-              <tr><th>Dados antigos</th><td>Movimentações importadas de 08 a 16/09 ficam marcadas como HISTÓRICO e não definem a garagem atual</td></tr>
+              <tr><th>Dados antigos</th><td>Movimentações de 08 a 16/09 ficam como HISTÓRICO; as atualizações de 17 a 19/09 definem a situação operacional atual</td></tr>
+              <tr><th>Atualização das planilhas</th><td>{atualizacao1909Aplicada ? 'ATUALIZADA ATÉ 19/09/2026' : 'PENDENTE'}</td></tr>
               <tr><th>Banco compartilhado</th><td>OFF - será implantado após aprovação</td></tr>
             </tbody></table>
           </div>
@@ -6010,7 +7230,7 @@ function App() {
             <div>
               <h2>Carga consolidada das planilhas</h2>
               <p className="panel-subtitle">
-                Histórico validado de 08 a 17/09/2026, com duplicações e conflitos tratados
+                Histórico validado de 08 a 17/09/2026 + atualização operacional automática de 18 e 19/09
               </p>
             </div>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
@@ -6048,11 +7268,12 @@ function App() {
           <div className="table-container">
             <table>
               <tbody>
-                <tr><th>Período analisado</th><td>08/09/2026 a 17/09/2026</td></tr>
+                <tr><th>Período analisado</th><td>08/09/2026 a 19/09/2026</td></tr>
                 <tr><th>Movimentações históricas para carga</th><td>133 registros de 08 a 16/09</td></tr>
-                <tr><th>Movimentos de 17/09</th><td>Não são duplicados; o estado atual do protótipo é preservado</td></tr>
+                <tr><th>Movimentos de 17/09</th><td>Os status finais do dia foram reconciliados com a planilha</td></tr>
+                <tr><th>Atualização 18 e 19/09</th><td>53 eventos incorporados ao estado operacional, com deduplicação automática</td></tr>
                 <tr><th>Backup automático</th><td>{backupCargaDisponivel ? 'DISPONÍVEL - permite desfazer a última carga' : 'Será criado imediatamente antes da próxima importação'}</td></tr>
-                <tr><th>Retidos ativos confirmados</th><td>9 prefixos no snapshot mais recente</td></tr>
+                <tr><th>Retidos ativos confirmados</th><td>9 prefixos no snapshot de 19/09</td></tr>
                 <tr><th>Conflito 162204</th><td>Importada apenas a saída ATA x SPO 21:35 às 20:55; a segunda saída conflitante foi excluída da carga</td></tr>
                 <tr><th>146204</th><td>Saída de 14/09 às 09:17 preservada sem inventar a linha de saída</td></tr>
                 <tr><th>Planejamentos</th><td>VAI CHEGAR e EM TRÂNSITO não foram convertidos em CHEGOU/SAIU</td></tr>
@@ -6357,7 +7578,7 @@ function App() {
           <span>{veiculosEmManutencao.length} em manutenção</span>
           <span>{veiculosAguardandoLimpeza.length} aguardando limpeza</span>
           <span>{retidosAtivos.length} retido(s) geral</span>
-          <span>Protótipo v2.3</span>
+          <span>Protótipo v2.4</span>
         </footer>
       </main>
 
