@@ -45,16 +45,7 @@ const BASES_OPERACIONAIS = [
 ] as const
 
 const AUTH_SESSION_KEY = 'cor-auth-session-v1'
-const AUTH_PASSWORD_HASH =
-  'bff679488c518b5f2e8f9cd7334a43798eb44f6536e7e424652c510d96bfdcc1'
-
-async function sha256(texto: string) {
-  const dados = new TextEncoder().encode(texto)
-  const digest = await crypto.subtle.digest('SHA-256', dados)
-  return Array.from(new Uint8Array(digest))
-    .map((byte) => byte.toString(16).padStart(2, '0'))
-    .join('')
-}
+const AUTH_PASSWORD = '123@456'
 
 type Pagina =
   | 'painel'
@@ -6089,9 +6080,11 @@ function App() {
 
   const paginaRetencao = pagina === 'garagem' || pagina === 'ocorrencias'
 
-  async function entrarComSenha(event: FormEvent<HTMLFormElement>) {
+  function entrarComSenha(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!senhaAcesso.trim()) {
+    const senhaDigitada = senhaAcesso.trim()
+
+    if (!senhaDigitada) {
       setErroSenha('Digite a senha de acesso.')
       return
     }
@@ -6099,21 +6092,16 @@ function App() {
     setValidandoSenha(true)
     setErroSenha('')
 
-    try {
-      const hashDigitado = await sha256(senhaAcesso)
-      if (hashDigitado === AUTH_PASSWORD_HASH) {
-        sessionStorage.setItem(AUTH_SESSION_KEY, '1')
-        setAutenticado(true)
-        setSenhaAcesso('')
-        return
-      }
-
-      setErroSenha('Senha incorreta. Verifique e tente novamente.')
-    } catch {
-      setErroSenha('Não foi possível validar o acesso neste navegador.')
-    } finally {
+    if (senhaDigitada === AUTH_PASSWORD) {
+      sessionStorage.setItem(AUTH_SESSION_KEY, '1')
+      setAutenticado(true)
+      setSenhaAcesso('')
       setValidandoSenha(false)
+      return
     }
+
+    setErroSenha('Senha incorreta. Verifique e tente novamente.')
+    setValidandoSenha(false)
   }
 
   function sairDoSistema() {
