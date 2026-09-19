@@ -6080,9 +6080,17 @@ function App() {
 
   const paginaRetencao = pagina === 'garagem' || pagina === 'ocorrencias'
 
+  function normalizarSenha(valor: string) {
+    return valor
+      .normalize('NFKC')
+      .replace(/[\u200B-\u200D\uFEFF]/g, '')
+      .replace(/\s+/g, '')
+  }
+
   function entrarComSenha(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const senhaDigitada = senhaAcesso.trim()
+    const senhaDigitada = normalizarSenha(senhaAcesso)
+    const senhaEsperada = normalizarSenha(AUTH_PASSWORD)
 
     if (!senhaDigitada) {
       setErroSenha('Digite a senha de acesso.')
@@ -6092,7 +6100,7 @@ function App() {
     setValidandoSenha(true)
     setErroSenha('')
 
-    if (senhaDigitada === AUTH_PASSWORD) {
+    if (senhaDigitada === senhaEsperada) {
       sessionStorage.setItem(AUTH_SESSION_KEY, '1')
       setAutenticado(true)
       setSenhaAcesso('')
@@ -6202,7 +6210,7 @@ function App() {
                 if (erroSenha) setErroSenha('')
               }}
               autoFocus
-              autoComplete="current-password"
+              autoComplete="off"
               placeholder="Digite a senha"
               style={{
                 width: '100%',
