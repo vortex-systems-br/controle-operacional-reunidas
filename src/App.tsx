@@ -44,6 +44,18 @@ const BASES_OPERACIONAIS = [
   { codigo: 'SPO', nome: 'São Paulo' },
 ] as const
 
+const AUTH_SESSION_KEY = 'cor-auth-session-v1'
+const AUTH_PASSWORD_HASH =
+  'bff679488c518b5f2e8f9cd7334a43798eb44f6536e7e424652c510d96bfdcc1'
+
+async function sha256(texto: string) {
+  const dados = new TextEncoder().encode(texto)
+  const digest = await crypto.subtle.digest('SHA-256', dados)
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, '0'))
+    .join('')
+}
+
 type Pagina =
   | 'painel'
   | 'frota'
@@ -3339,6 +3351,12 @@ function backupCargaPlanilhasExiste() {
 }
 
 function App() {
+  const [autenticado, setAutenticado] = useState(
+    () => sessionStorage.getItem(AUTH_SESSION_KEY) === '1'
+  )
+  const [senhaAcesso, setSenhaAcesso] = useState('')
+  const [erroSenha, setErroSenha] = useState('')
+  const [validandoSenha, setValidandoSenha] = useState(false)
   const [pagina, setPagina] = useState<Pagina>('painel')
   const [baseSelecionada, setBaseSelecionada] =
     useState<BaseOperacional>(carregarBaseOperacional)
@@ -6071,6 +6089,188 @@ function App() {
 
   const paginaRetencao = pagina === 'garagem' || pagina === 'ocorrencias'
 
+  async function entrarComSenha(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (!senhaAcesso.trim()) {
+      setErroSenha('Digite a senha de acesso.')
+      return
+    }
+
+    setValidandoSenha(true)
+    setErroSenha('')
+
+    try {
+      const hashDigitado = await sha256(senhaAcesso)
+      if (hashDigitado === AUTH_PASSWORD_HASH) {
+        sessionStorage.setItem(AUTH_SESSION_KEY, '1')
+        setAutenticado(true)
+        setSenhaAcesso('')
+        return
+      }
+
+      setErroSenha('Senha incorreta. Verifique e tente novamente.')
+    } catch {
+      setErroSenha('Não foi possível validar o acesso neste navegador.')
+    } finally {
+      setValidandoSenha(false)
+    }
+  }
+
+  function sairDoSistema() {
+    sessionStorage.removeItem(AUTH_SESSION_KEY)
+    setAutenticado(false)
+    setSenhaAcesso('')
+    setErroSenha('')
+    setPagina('painel')
+  }
+
+  if (!autenticado) {
+    return (
+      <div
+        style={{
+          minHeight: '100vh',
+          display: 'grid',
+          placeItems: 'center',
+          background:
+            'linear-gradient(135deg, #071f3b 0%, #0b3b6e 52%, #0b5aa5 100%)',
+          padding: 24,
+          fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
+        }}
+      >
+        <div
+          style={{
+            width: '100%',
+            maxWidth: 430,
+            background: '#ffffff',
+            borderRadius: 18,
+            boxShadow: '0 24px 70px rgba(0, 0, 0, 0.28)',
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            style={{
+              background: '#0b3b6e',
+              color: '#ffffff',
+              padding: '28px 30px 24px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 14,
+            }}
+          >
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                display: 'grid',
+                placeItems: 'center',
+                borderRadius: 14,
+                background: 'rgba(255,255,255,0.12)',
+                border: '1px solid rgba(255,255,255,0.18)',
+              }}
+            >
+              <Bus size={30} />
+            </div>
+            <div>
+              <div style={{ fontSize: 25, fontWeight: 800, lineHeight: 1.1 }}>Reunidas</div>
+              <div style={{ marginTop: 5, fontSize: 12, opacity: 0.86, letterSpacing: 0.7 }}>
+                CONTROLE OPERACIONAL
+              </div>
+            </div>
+          </div>
+
+          <form onSubmit={entrarComSenha} style={{ padding: 30 }}>
+            <div
+              style={{
+                width: 54,
+                height: 54,
+                borderRadius: 16,
+                display: 'grid',
+                placeItems: 'center',
+                background: '#eaf3ff',
+                color: '#0b5aa5',
+                marginBottom: 20,
+              }}
+            >
+              <LockKeyhole size={27} />
+            </div>
+
+            <h1 style={{ margin: 0, fontSize: 24, color: '#0b2f57' }}>Acesso restrito</h1>
+            <p style={{ margin: '8px 0 24px', color: '#667085', lineHeight: 1.55 }}>
+              Área destinada ao uso interno do Controle Operacional. Informe a senha para continuar.
+            </p>
+
+            <label
+              htmlFor="senha-acesso"
+              style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#344054', marginBottom: 7 }}
+            >
+              Senha de acesso
+            </label>
+            <input
+              id="senha-acesso"
+              type="password"
+              value={senhaAcesso}
+              onChange={(event) => {
+                setSenhaAcesso(event.target.value)
+                if (erroSenha) setErroSenha('')
+              }}
+              autoFocus
+              autoComplete="current-password"
+              placeholder="Digite a senha"
+              style={{
+                width: '100%',
+                boxSizing: 'border-box',
+                height: 46,
+                padding: '0 13px',
+                borderRadius: 10,
+                border: erroSenha ? '1px solid #e5484d' : '1px solid #d0d5dd',
+                outline: 'none',
+                fontSize: 15,
+              }}
+            />
+
+            {erroSenha && (
+              <div style={{ marginTop: 9, color: '#c62828', fontSize: 13 }}>
+                {erroSenha}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={validandoSenha}
+              style={{
+                width: '100%',
+                height: 46,
+                marginTop: 18,
+                border: 0,
+                borderRadius: 10,
+                background: validandoSenha ? '#7b97b4' : '#0b5aa5',
+                color: '#ffffff',
+                fontWeight: 800,
+                fontSize: 15,
+                cursor: validandoSenha ? 'wait' : 'pointer',
+              }}
+            >
+              {validandoSenha ? 'Validando...' : 'Entrar'}
+            </button>
+
+            <div
+              style={{
+                marginTop: 22,
+                paddingTop: 18,
+                borderTop: '1px solid #eaecf0',
+                fontSize: 12,
+                lineHeight: 1.5,
+                color: '#7b8493',
+              }}
+            >
+              Protótipo operacional com acesso por senha. A autenticação individual será implantada na etapa de banco de dados.
+            </div>
+          </form>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="app">
       <aside className="sidebar">
@@ -6094,7 +6294,7 @@ function App() {
 
         <div className="sidebar-bottom">
           <button className={`nav-item ${pagina === 'configuracoes' ? 'active' : ''}`} onClick={() => trocarPagina('configuracoes')}><Settings size={19} /><span>Configurações</span></button>
-          <button className="nav-item" onClick={() => window.alert('O login será ativado na versão com banco de dados.')}><LogOut size={19} /><span>Sair</span></button>
+          <button className="nav-item" onClick={sairDoSistema}><LogOut size={19} /><span>Sair</span></button>
         </div>
       </aside>
 
@@ -6161,7 +6361,7 @@ function App() {
           <span>{veiculosEmManutencao.length} em manutenção</span>
           <span>{veiculosAguardandoLimpeza.length} aguardando limpeza</span>
           <span>{retidosAtivos.length} retido(s) geral</span>
-          <span>Protótipo v2.2</span>
+          <span>Protótipo v2.3</span>
         </footer>
       </main>
 
